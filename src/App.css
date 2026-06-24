@@ -301,6 +301,8 @@ section{padding:clamp(3rem,5vw,5rem) 0;position:relative}
   border:1px solid var(--border);
   border-radius:var(--radius);padding:1.5rem;
   transition:all .35s var(--ease);position:relative;
+  display:flex;flex-direction:column;
+  height:100%;
 }
 .fw-card::before{
   content:'';position:absolute;top:0;left:0;right:0;height:2px;
@@ -318,7 +320,7 @@ section{padding:clamp(3rem,5vw,5rem) 0;position:relative}
 }
 .fw-head h3{font-size:1.0625rem;font-weight:600;color:var(--text)}
 .fw-tech{font-size:.6875rem;color:var(--accent);margin-bottom:.75rem;opacity:.7}
-.fw-tests{display:flex;flex-direction:column;gap:.5rem;margin-bottom:.75rem}
+.fw-tests{display:flex;flex-direction:column;gap:.5rem;margin-bottom:.75rem;flex:1}
 .fw-row{font-size:.75rem;color:var(--text-secondary);transition:opacity .25s}
 .fw-row .lbl{display:flex;justify-content:space-between;margin-bottom:.2rem}
 .fw-row .lbl span:last-child{color:var(--accent);font-weight:500}
