@@ -1,16 +1,35 @@
-# React + Vite
+# QA Automation Portfolio — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**→ [Visitar la página](https://signaltree.github.io/qa-portfolio-landing/)**
 
-Currently, two official plugins are available:
+Landing page de mi portafolio de automatización QA. Muestra 5 proyectos de testing (Playwright, Karate, REST Assured, Cucumber BDD, Appium), mi experiencia, habilidades y CV descargable.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- Vite + React
+- CSS vanilla (sin frameworks)
+- GitHub Pages (despliegue automático desde `main`)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Desarrollo
 
-## Expanding the Oxlint configuration
+```bash
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Deploy
+
+El push a `main` activa GitHub Actions, que construye y despliega a `gh-pages`.
+
+```bash
+git push origin main
+```
+
+## Ver CV
+
+El CV en formato Harvard se despliega como parte del sitio en `/cv.html`. Se imprime a PDF desde el botón de descarga.
+
+## Repositorio principal
+
+Los proyectos de automatización viven en:
+[github.com/Signaltree/qa-automation-portfolio](https://github.com/Signaltree/qa-automation-portfolio)
