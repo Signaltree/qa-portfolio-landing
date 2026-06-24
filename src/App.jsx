@@ -4,8 +4,8 @@ import './App.css'
 /* ─── Data ─── */
 
 const particles = [
-  { t:'12%', l:'6%', w:80, h:80, n:'135+' },
-  { t:'55%', l:'4%', w:60, h:60, n:'4' },
+  { t:'12%', l:'6%', w:80, h:80, n:'145+' },
+  { t:'55%', l:'4%', w:60, h:60, n:'5' },
   { t:'22%', r:'8%', w:70, h:70, n:'2' },
   { t:'68%', r:'4%', w:55, h:55, n:'100%' },
   { t:'42%', l:'48%', w:90, h:90, n:'24' },
@@ -317,7 +317,7 @@ function Frameworks() {
   return (
     <section id="frameworks">
       <Reveal d={1}><div className="section-tag">Proyectos</div></Reveal>
-      <Reveal d={2}><h2 className="section-title">Cinco capas de calidad</h2></Reveal>
+      <Reveal d={2}><h2 className="section-title">Cinco capas de <span className="gradient-text">calidad</span></h2></Reveal>
       <Reveal d={3}><p className="section-desc">145+ tests en cinco frameworks. Cada suite cubre un aspecto distinto: interfaz, API, contratos, BDD y mobile.</p></Reveal>
       <div className="fw-grid">
         {frameworks.map((fw, i) => <FWCard key={i} fw={fw} i={i} />)}
