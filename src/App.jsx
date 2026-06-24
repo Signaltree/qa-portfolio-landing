@@ -41,6 +41,8 @@ const certifications = [
   { name:'ISTQB Foundation Level', issuer:'International Software Testing', st:'Preparación', icon:'📋' },
 ]
 
+const BASE = import.meta.env.BASE_URL || '/'
+
 const navLinks = [
   { label:'Sobre mí', id:'about' },
   { label:'Habilidades', id:'skills' },
@@ -170,7 +172,7 @@ function Hero() {
       </div>
       <div className="hero-content">
         <div className="hero-photo">
-          <img src="/images/hero-icon.svg" alt="Automation & Nature" />
+            <img src={`${BASE}images/hero-icon.svg`} alt="Automation & Nature" />
         </div>
         <div className="hero-tag">QA Automation · Santiago, Chile</div>
         <h1 className="hero-title">
@@ -223,7 +225,7 @@ function About() {
       <Reveal d={3}>
         <div className="about-wrap">
           <div className="about-photo">
-            <img src="/images/profile.png" alt="Alejandro Adriazola" loading="lazy" />
+            <img src={`${BASE}images/profile.png`} alt="Alejandro Adriazola" loading="lazy" />
           </div>
           <h2>Alejandro Eduardo Adriazola Sorhaburu</h2>
           <div className="sub">Analista Programador · QA Automation</div>
@@ -245,7 +247,7 @@ function About() {
             <a href="https://github.com/Signaltree" target="_blank" rel="noreferrer">🐙 GitHub</a>
             <a href="https://www.linkedin.com/in/aadriazola/" target="_blank" rel="noreferrer">💼 LinkedIn</a>
             <a href="mailto:ale.edu.adriazola@gmail.com">✉️ Email</a>
-            <a href="/cv.html" target="_blank" rel="noreferrer">📄 Ver CV</a>
+            <a href={`${BASE}cv.html`} target="_blank" rel="noreferrer">📄 Ver CV</a>
           </div>
         </div>
       </Reveal>
@@ -381,7 +383,7 @@ function Contact() {
             <a href="tel:+56964362078">📞 +56 9 6436 2078</a>
             <a href="https://github.com/Signaltree" target="_blank" rel="noreferrer">🐙 GitHub</a>
             <a href="https://www.linkedin.com/in/aadriazola/" target="_blank" rel="noreferrer">💼 LinkedIn</a>
-            <a href="/cv.html" target="_blank" rel="noreferrer">📄 Descargar CV</a>
+            <a href={`${BASE}cv.html`} target="_blank" rel="noreferrer">📄 Descargar CV</a>
           </div>
         </div>
       </Reveal>
