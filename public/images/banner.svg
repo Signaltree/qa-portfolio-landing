@@ -1,0 +1,67 @@
+<svg width="100%" viewBox="0 0 1774 586" role="img" xmlns="http://www.w3.org/2000/svg" style="">
+  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">LinkedIn banner — Alejandro Eduardo Adriazola Sorhaburu</title>
+  <desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Banner con fondo de gradientes pastel y formas geométricas grandes, texto a la derecha</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4A97F"/>
+      <stop offset="35%" stop-color="#C9B8E8"/>
+      <stop offset="65%" stop-color="#9ECFE8"/>
+      <stop offset="100%" stop-color="#A8D8C8"/>
+    </linearGradient>
+    <linearGradient id="shape1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8A87C" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#C9B8E8" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="shape2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9ECFE8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#B8C9E8" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="shape3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C9B8E8" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#F4A97F" stop-opacity="0.75"/>
+    </linearGradient>
+    <clipPath id="clip">
+      <rect width="1584" height="396"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1584" height="396" fill="url(#bg)" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Large geometric shapes — semi-circles and partial circles like reference -->
+  <!-- Shape A: large circle, left, clipped -->
+  <circle cx="120" cy="198" r="160" fill="url(#shape3)" clip-path="url(#clip)" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Shape B: D-shape (half circle) -->
+  <path d="M280,60 A140,140 0 0,1 280,338 L280,60Z" fill="url(#shape1)" clip-path="url(#clip)" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Shape C: full circle, center-left -->
+  <circle cx="520" cy="198" r="150" fill="url(#shape2)" clip-path="url(#clip)" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Shape D: large D right-facing -->
+  <path d="M640,50 A140,140 0 0,1 640,346 L640,50Z" fill="url(#shape3)" clip-path="url(#clip)" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Shape E: partial circle center -->
+  <circle cx="820" cy="100" r="130" fill="url(#shape1)" clip-path="url(#clip)" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Shape F: half-arc, far right top -->
+  <path d="M1400,0 A160,160 0 0,1 1400,320 L1400,0Z" fill="url(#shape2)" clip-path="url(#clip)" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Shape G: circle bottom right -->
+  <circle cx="1584" cy="396" r="180" fill="url(#shape3)" clip-path="url(#clip)" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Right side overlay — soft translucent panel to make text legible -->
+  <rect x="900" y="0" width="684" height="396" fill="#C9B8E8" fill-opacity="0.18" style="fill:rgb(201, 184, 232);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Text block — upper right -->
+  <text x="1555" y="170" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" fill="#FFFFFF" fill-opacity="0.97" text-anchor="end" letter-spacing="-0.5" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, &quot;Times New Roman&quot;, serif;font-size:58px;font-weight:700;text-anchor:end;dominant-baseline:auto">Alejandro Eduardo</text>
+
+  <text x="1555" y="238" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" fill="#FFFFFF" fill-opacity="0.97" text-anchor="end" letter-spacing="-0.5" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, &quot;Times New Roman&quot;, serif;font-size:58px;font-weight:700;text-anchor:end;dominant-baseline:auto">Adriazola Sorhaburu</text>
+
+  <!-- Thin separator -->
+  <line x1="1060" y1="258" x2="1555" y2="258" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="0.8" style="fill:rgb(0, 0, 0);stroke:rgb(255, 255, 255);color:rgb(251, 251, 254);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Subtitle -->
+  <text x="1555" y="294" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="400" fill="#FFFFFF" fill-opacity="0.85" text-anchor="end" letter-spacing="3" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, &quot;Times New Roman&quot;, serif;font-size:24px;font-weight:400;text-anchor:end;dominant-baseline:auto">ANALISTA PROGRAMADOR</text>
+</svg>

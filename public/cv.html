@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alejandro Adriazola — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{font-size:15px}
+body{
+  font-family:'Inter','Georgia',serif;
+  color:#1a1a1a;background:#fafaf8;
+  line-height:1.5;-webkit-font-smoothing:antialiased;
+  padding:2rem;
+}
+.page{
+  max-width:850px;margin:0 auto;
+  background:#fff;
+  padding:3rem 3.5rem;
+  box-shadow:0 2px 20px rgba(0,0,0,.06);
+  border-radius:4px;
+}
+
+/* ─── Header ─── */
+header{border-bottom:2px solid #2d4a2d;padding-bottom:1.25rem;margin-bottom:1.5rem}
+h1{
+  font-family:'Lora',Georgia,serif;
+  font-size:2rem;font-weight:700;color:#1a1a1a;
+  letter-spacing:-.02em;margin-bottom:.15rem;
+}
+h1 span{color:#3a6b35}
+.subtitle{font-size:.9rem;color:#555;font-weight:400}
+.contact-row{
+  display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;
+  margin-top:.5rem;font-size:.8rem;color:#555;
+}
+.contact-row span{display:inline-flex;align-items:center;gap:.3rem}
+
+/* ─── Grid ─── */
+.grid{display:grid;grid-template-columns:1fr 2fr;gap:2rem}
+
+/* ─── Sidebar ─── */
+.sidebar h3{
+  font-family:'Lora',Georgia,serif;
+  font-size:.8rem;font-weight:600;text-transform:uppercase;
+  letter-spacing:.12em;color:#3a6b35;
+  margin-bottom:.75rem;padding-bottom:.3rem;
+  border-bottom:1.5px solid #e0e0e0;
+}
+.sidebar .block{margin-bottom:1.5rem}
+
+/* Skills */
+.skill-group{margin-bottom:.75rem}
+.skill-group h4{
+  font-size:.75rem;font-weight:600;color:#333;
+  margin-bottom:.25rem;text-transform:uppercase;letter-spacing:.04em;
+}
+.skill-group p{font-size:.78rem;color:#444;line-height:1.5}
+
+/* Languages */
+.lang-item{display:flex;justify-content:space-between;font-size:.78rem;padding:.2rem 0;border-bottom:1px solid #f0f0f0}
+.lang-item:last-child{border-bottom:none}
+.lang-item .lv{color:#3a6b35;font-weight:500;font-size:.7rem}
+
+/* Certs sidebar */
+.sidebar ul{list-style:none;font-size:.78rem;color:#444}
+.sidebar ul li{padding:.25rem 0;border-bottom:1px solid #f0f0f0}
+.sidebar ul li:last-child{border-bottom:none}
+.sidebar ul li .date{color:#3a6b35;font-size:.7rem;font-weight:500}
+
+/* ─── Main ─── */
+.main h3{
+  font-family:'Lora',Georgia,serif;
+  font-size:.8rem;font-weight:600;text-transform:uppercase;
+  letter-spacing:.12em;color:#3a6b35;
+  margin-bottom:.6rem;padding-bottom:.3rem;
+  border-bottom:1.5px solid #e0e0e0;
+}
+.main .block{margin-bottom:1.25rem}
+
+/* Profile */
+.profile p{font-size:.82rem;color:#444;line-height:1.6}
+
+/* Experience */
+.exp-item{margin-bottom:1rem}
+.exp-item:last-child{margin-bottom:0}
+.exp-hdr{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.25rem}
+.exp-hdr h4{font-family:'Lora',Georgia,serif;font-size:.9rem;font-weight:600;color:#1a1a1a}
+.exp-hdr .date{font-size:.72rem;color:#3a6b35;font-weight:500;white-space:nowrap}
+.exp-role{font-size:.8rem;color:#555;font-style:italic;margin-bottom:.25rem}
+.exp-item ul{list-style:none;padding-left:0}
+.exp-item ul li{
+  font-size:.78rem;color:#444;line-height:1.5;
+  padding:.15rem 0 .15rem 1rem;position:relative;
+}
+.exp-item ul li::before{content:'•';position:absolute;left:0;color:#3a6b35}
+
+/* Projects */
+.proj-item{margin-bottom:.75rem}
+.proj-item:last-child{margin-bottom:0}
+.proj-item h4{font-family:'Lora',Georgia,serif;font-size:.85rem;font-weight:600;color:#1a1a1a}
+.proj-item .stack{font-size:.72rem;color:#3a6b35;font-weight:500;margin-bottom:.15rem}
+.proj-item p{font-size:.78rem;color:#444;line-height:1.5}
+.proj-item a{color:#3a6b35;text-decoration:none;font-weight:500}
+.proj-item a:hover{text-decoration:underline}
+
+/* Education main */
+.edu-item{font-size:.82rem;color:#444;margin-bottom:.5rem}
+.edu-item strong{color:#1a1a1a;font-weight:600}
+.edu-item .date{color:#3a6b35;font-weight:500;font-size:.75rem}
+
+/* ─── Print ─── */
+@media print{
+  body{background:#fff;padding:0;font-size:13px}
+  .page{box-shadow:none;padding:1.5rem 2rem;border-radius:0;max-width:100%}
+  .no-print{display:none!important}
+  header{padding-bottom:1rem;margin-bottom:1rem}
+  .grid{gap:1.5rem}
+  .sidebar .block{margin-bottom:1rem}
+  .main .block{margin-bottom:1rem}
+  .exp-item{margin-bottom:.6rem}
+  html{font-size:12.5px}
+}
+@page{margin:1.5cm 1.8cm}
+
+/* ─── Download button ─── */
+.no-print{
+  text-align:center;margin:1.5rem 0;
+}
+.no-print button{
+  font-family:'Inter',sans-serif;
+  padding:.7rem 2rem;border-radius:100px;
+  border:1.5px solid #3a6b35;background:#fff;
+  color:#3a6b35;font-size:.85rem;font-weight:500;
+  cursor:pointer;transition:all .2s;
+}
+.no-print button:hover{background:#3a6b35;color:#fff}
+
+@media(max-width:650px){
+  .grid{grid-template-columns:1fr;gap:1rem}
+  .page{padding:1.5rem}
+  h1{font-size:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<div class="no-print">
+  <button onclick="window.print()">📥 Descargar PDF</button>
+  <p style="font-size:.75rem;color:#888;margin-top:.5rem">Se abrirá el diálogo de impresión. Selecciona "Guardar como PDF".</p>
+</div>
+
+<div class="page" id="cv">
+
+<header>
+  <h1>Alejandro <span>Adriazola</span></h1>
+  <div class="subtitle">Analista Programador · QA Automation</div>
+  <div class="contact-row">
+    <span>📧 ale.edu.adriazola@gmail.com</span>
+    <span>📞 +56 9 6436 2078</span>
+    <span>📍 Santiago, Chile</span>
+    <span>🔗 linkedin.com/in/aadriazola/</span>
+    <span>🐙 github.com/Signaltree</span>
+  </div>
+</header>
+
+<div class="grid">
+
+<!-- Sidebar -->
+<div class="sidebar">
+
+  <div class="block">
+    <h3>Skills Técnicos</h3>
+    <div class="skill-group">
+      <h4>Test Automation</h4>
+      <p>Playwright · Karate · Selenium WebDriver · REST Assured · Cucumber BDD · Appium</p>
+    </div>
+    <div class="skill-group">
+      <h4>API & Performance</h4>
+      <p>Postman · JMeter · Gatling · REST APIs · GraphQL</p>
+    </div>
+    <div class="skill-group">
+      <h4>Lenguajes</h4>
+      <p>TypeScript · JavaScript · Java · Python · SQL · Bash</p>
+    </div>
+    <div class="skill-group">
+      <h4>CI/CD & DevOps</h4>
+      <p>GitHub Actions · Docker · Ansible · Git · Linux (RedHat/CentOS) · Selenium Grid</p>
+    </div>
+    <div class="skill-group">
+      <h4>Seguridad</h4>
+      <p>OWASP Top 10 · SonarQube · Kali Linux · Ley 21.663</p>
+    </div>
+    <div class="skill-group">
+      <h4>Herramientas</h4>
+      <p>Jira · Agile/Scrum · Kanban · BDD · POM · Allure · ERP QAD</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <h3>Idiomas</h3>
+    <div class="lang-item"><span>Español</span><span class="lv">Nativo</span></div>
+    <div class="lang-item"><span>Inglés</span><span class="lv">Avanzado C1</span></div>
+  </div>
+
+  <div class="block">
+    <h3>Educación</h3>
+    <ul>
+      <li><strong>Analista Programador</strong><br>INACAP, Santiago — 2026</li>
+      <li style="padding-top:.5rem"><strong>Ingeniería en Informática</strong><br>INACAP, Santiago — cursando</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h3>Certificaciones</h3>
+    <ul>
+      <li>Analista Programador <span class="date">· 2026</span></li>
+      <li>ISTQB Foundation Level <span class="date">· en preparación</span></li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- Main -->
+<div class="main">
+
+  <div class="block">
+    <h3>Perfil Profesional</h3>
+    <div class="profile">
+      <p>
+        Analista Programador titulado con experiencia práctica en automatización de pruebas,
+        infraestructura cloud y análisis de datos. He construido un portfolio de automatización
+        QA con más de 135 tests distribuidos en 4 frameworks (Playwright, Karate, REST Assured,
+        Cucumber BDD), cubriendo desde pruebas funcionales hasta seguridad según OWASP Top 10
+        y la Ley 21.663 de ciberseguridad chilena. Inglés avanzado C1. Busco aportar desde la
+        automatización y la calidad en proyectos desafiantes.
+      </p>
+    </div>
+  </div>
+
+  <div class="block">
+    <h3>Proyecto Destacado</h3>
+    <div class="proj-item">
+      <h4>QA Automation Portfolio</h4>
+      <div class="stack">Playwright · Karate · REST Assured · Cucumber BDD · GitHub Actions · Allure · Docker</div>
+      <p>
+        Suite de 135+ tests automatizados en 4 frameworks contra SauceDemo (UI) y JSONPlaceholder (API).
+        Incluye: pruebas funcionales, regresión visual, intercepción de red, seguridad OWASP, simulación
+        de carga con Gatling, contratos CSIRT, y BDD con Selenium Grid. CI/CD con GitHub Actions y
+        reportes Allure. Cumplimiento con Ley 21.663 (CSIRT chileno).
+        <br><a href="https://github.com/Signaltree/qa-automation-portfolio" target="_blank">github.com/Signaltree/qa-automation-portfolio</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="block">
+    <h3>Experiencia Laboral</h3>
+
+    <div class="exp-item">
+      <div class="exp-hdr">
+        <h4>IT Conosur</h4>
+        <span class="date">2025 — Presente</span>
+      </div>
+      <div class="exp-role">Operador Cloud / Soporte Funcional ERP</div>
+      <ul>
+        <li>Administré infraestructura cloud y on-premise para 12 clientes empresariales sobre ERP QAD en RedHat y CentOS.</li>
+        <li>Automaticé tareas operativas de 2+ horas diarias con scripts Python y Bash, usando Ansible para gestión de cron jobs en múltiples servidores.</li>
+        <li>Ejecuté restauración y validación de bases de datos en producción con controles de integridad estructurados.</li>
+        <li>Gestioné control de versiones Git en entornos productivos multi-cliente.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-hdr">
+        <h4>Conectados</h4>
+        <span class="date">2019 — 2025</span>
+      </div>
+      <div class="exp-role">Analista de Datos / Back Office (Cliente WOM)</div>
+      <ul>
+        <li>Diseñé y ejecuté casos de prueba funcionales, de regresión e integración en ciclos Agile Scrum.</li>
+        <li>Automaticé pruebas API REST con Karate/Gherkin (BDD) y flujos web con Selenium WebDriver.</li>
+        <li>Validé APIs REST con Postman y administré el ciclo de vida de defectos en Jira.</li>
+        <li>Lideré toma de requerimientos funcionales con usuarios no técnicos y entrené a 6 equipos en estándares de calidad.</li>
+        <li>Ejecuté pruebas de carga con JMeter y consultas SQL para validación de consistencia de datos.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<footer style="margin-top:1.5rem;text-align:center;font-size:.7rem;color:#999;border-top:1px solid #e0e0e0;padding-top:.75rem">
+  Actualizado: Junio 2026
+</footer>
+
+</div>
+</body>
+</html>
