@@ -17,6 +17,7 @@ const frameworks = [
   { icon:'🥋', name:'Karate', tech:'Java · JSONPlaceholder', repo:'https://github.com/Signaltree/qa-automation-portfolio/tree/main/karate', tests:[{l:'CRUD Posts',c:20},{l:'CRUD Users',c:12},{l:'Auth & autorización',c:6},{l:'OWASP Top 10',c:14},{l:'Contrato CSIRT',c:5},{l:'Carga (Gatling)',c:10}] },
   { icon:'🧪', name:'REST Assured', tech:'Java · JSONPlaceholder', repo:'https://github.com/Signaltree/qa-automation-portfolio/tree/main/rest-assured', tests:[{l:'Validaciones GET',c:4},{l:'Validaciones POST',c:3},{l:'Validaciones PUT',c:3},{l:'Validaciones DELETE',c:3},{l:'JSON Schema',c:2},{l:'POJO + Hamcrest',c:3}] },
   { icon:'🥒', name:'Cucumber BDD', tech:'Java · Selenium · SauceDemo', repo:'https://github.com/Signaltree/qa-automation-portfolio/tree/main/bdd-cucumber', tests:[{l:'Features login',c:3},{l:'Features inventario',c:3},{l:'Features carro',c:3},{l:'Features checkout',c:3},{l:'Selenium Grid',c:2}] },
+  { icon:'📱', name:'Appium', tech:'Java · Wikipedia (Android)', repo:'https://github.com/Signaltree/qa-automation-portfolio/tree/main/appium', tests:[{l:'Búsqueda básica',c:1},{l:'Validación resultados',c:2},{l:'Interfaz móvil',c:1}] },
 ]
 
 const skillCategories = [
@@ -181,7 +182,7 @@ function Hero() {
         </h1>
         <p className="hero-sub">
           Analista Programador, construyendo un camino en automatización de pruebas
-          con cuatro frameworks, dos lenguajes y un estándar: calidad sin compromiso.
+           con cinco frameworks, dos lenguajes y un estándar: calidad sin compromiso.
         </p>
         <a href="#frameworks" className="hero-cta"
            onClick={(e) => { e.preventDefault(); scrollTo('frameworks') }}>
@@ -208,8 +209,8 @@ function Stats() {
   return (
     <Reveal>
       <div className="stats">
-        <StatItem num="135+" label="Tests Automatizados" />
-        <StatItem num="4" label="Frameworks" />
+        <StatItem num="145+" label="Tests Automatizados" />
+        <StatItem num="5" label="Frameworks" />
         <StatItem num="2" label="Lenguajes" />
         <StatItem num="100" label="Tests Exitosos" />
       </div>
@@ -232,7 +233,7 @@ function About() {
           <p>
             <span className="hl">Analista Programador</span> titulado en INACAP, cursando Ingeniería
             en Informática. Mi interés por la calidad de software me llevó a especializarme en
-            automatización de pruebas con Playwright, Karate, REST Assured y Cucumber BDD.
+            automatización de pruebas con Playwright, Karate, REST Assured, Cucumber BDD y Appium.
           </p>
           <p>
             Me motiva entender cada capa de una aplicación — de la interfaz a los contratos de API —
@@ -308,8 +309,8 @@ function Frameworks() {
   return (
     <section id="frameworks">
       <Reveal d={1}><div className="section-tag">Proyectos</div></Reveal>
-      <Reveal d={2}><h2 className="section-title">Cuatro capas de calidad</h2></Reveal>
-      <Reveal d={3}><p className="section-desc">135+ tests en cuatro frameworks. Cada suite cubre un aspecto distinto: interfaz, API, contratos y BDD.</p></Reveal>
+      <Reveal d={2}><h2 className="section-title">Cinco capas de calidad</h2></Reveal>
+      <Reveal d={3}><p className="section-desc">145+ tests en cinco frameworks. Cada suite cubre un aspecto distinto: interfaz, API, contratos, BDD y mobile.</p></Reveal>
       <div className="fw-grid">
         {frameworks.map((fw, i) => <FWCard key={i} fw={fw} i={i} />)}
       </div>
