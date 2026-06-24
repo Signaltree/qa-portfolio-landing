@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 
 /* ─── Data ─── */
@@ -42,12 +42,19 @@ const certifications = [
   { name:'ISTQB Foundation Level', issuer:'International Software Testing', st:'Preparación', icon:'📋' },
 ]
 
+const processSteps = [
+  { icon:'📋', num:'01', title:'Planificar y diseñar', desc:'Analizo los requerimientos, diseño casos de prueba y selecciono el framework adecuado para cada capa de la aplicación.' },
+  { icon:'⚙️', num:'02', title:'Automatizar y validar', desc:'Escribo pruebas siguiendo Page Object Model, integro con CI/CD y ejecuto validaciones funcionales, API, carga y mobile.' },
+  { icon:'📊', num:'03', title:'Reportar y desplegar', desc:'Genero reportes con Allure, documento resultados y despliego la evidencia en GitHub Pages para visibilidad del equipo.' },
+]
+
 const BASE = import.meta.env.BASE_URL || '/'
 
 const navLinks = [
   { label:'Sobre mí', id:'about' },
   { label:'Habilidades', id:'skills' },
   { label:'Proyectos', id:'frameworks' },
+  { label:'Proceso', id:'process' },
   { label:'Experiencia', id:'experience' },
   { label:'Certificaciones', id:'certs' },
   { label:'Contacto', id:'contact' },
@@ -162,6 +169,7 @@ function Hero() {
   return (
     <section className="hero" id="top">
       <div className="hero-bg" />
+      <div className="noise" />
       <div className="hero-grid" />
       <div className="particles">
         {particles.map((p, i) => (
@@ -368,6 +376,28 @@ function Certifications() {
   )
 }
 
+function Process() {
+  return (
+    <section id="process">
+      <Reveal d={1}><div className="section-tag">Metodología</div></Reveal>
+      <Reveal d={2}><h2 className="section-title">Cómo construyo <span className="gradient-text">calidad</span></h2></Reveal>
+      <Reveal d={3}><p className="section-desc">De la planificación al reporte. Un flujo consistente para cada proyecto de automatización.</p></Reveal>
+      <div className="process-grid">
+        {processSteps.map((s, i) => (
+          <Reveal key={i} d={Math.min(i + 1, 4)}>
+            <div className="process-step">
+              <div className="step-number">{s.num}</div>
+              <span className="step-icon">{s.icon}</span>
+              <h4>{s.title}</h4>
+              <p>{s.desc}</p>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 function Contact() {
   return (
     <section id="contact">
@@ -412,6 +442,7 @@ export default function App() {
       <About />
       <Skills />
       <Frameworks />
+      <Process />
       <Experience />
       <Certifications />
       <Contact />
