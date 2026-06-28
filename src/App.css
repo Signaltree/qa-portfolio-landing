@@ -258,6 +258,7 @@ section{padding:clamp(3rem,5vw,5rem) 0;position:relative}
   align-items:center;justify-content:center;text-align:center;
   gap:.75rem;
   width:100%;
+  background:color-mix(in srgb,var(--surface) 100%,var(--accent) 2%);
 }
 .fw-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem}
 .fw-name h3{
@@ -276,11 +277,11 @@ section{padding:clamp(3rem,5vw,5rem) 0;position:relative}
 .fw-row + .fw-row{border-top:1px solid var(--border)}
 .fw-row-label{font-family:var(--mono);font-size:.6875rem;color:var(--text-secondary)}
 .fw-row-count{font-family:var(--mono);font-size:.6875rem;color:var(--green)}
-.fw-desc{font-family:var(--mono);font-size:.6875rem;color:var(--text-secondary);line-height:1.6;max-width:220px}
+.fw-desc{font-family:var(--mono);font-size:.6875rem;color:var(--text);line-height:1.6;max-width:220px}
 .fw-tag-row{display:flex;gap:.375rem;flex-wrap:wrap;justify-content:center}
 .fw-tag{
   font-family:var(--mono);font-size:.5625rem;padding:.2rem .5rem;
-  border-radius:100px;background:rgba(0,212,255,.04);border:1px solid rgba(0,212,255,.1);
+  border-radius:100px;background:var(--surface);border:1px solid var(--border);
   color:var(--text-secondary);
 }
 .fw-repo{
