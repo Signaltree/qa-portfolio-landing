@@ -1,0 +1,38 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="branch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2d6a4f" stop-opacity=".15"/>
+      <stop offset="100%" stop-color="#2d6a4f" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="branch2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a8f6e" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="#5a8f6e" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke-linecap="round">
+    <path d="M300,0 Q320,100 280,200 Q250,300 320,400 Q360,450 300,500" stroke="url(#branch)" stroke-width="10" opacity=".5"/>
+    <path d="M350,0 Q380,150 330,300 Q290,400 380,550" stroke="url(#branch)" stroke-width="6" opacity=".4"/>
+    <path d="M600,0 Q580,80 620,180 Q650,250 590,350" stroke="url(#branch2)" stroke-width="8" opacity=".45"/>
+    <path d="M1200,0 Q1240,120 1180,280 Q1140,400 1250,500" stroke="url(#branch)" stroke-width="12" opacity=".4"/>
+    <path d="M1250,0 Q1220,100 1280,250 Q1320,380 1240,450" stroke="url(#branch2)" stroke-width="7" opacity=".5"/>
+    <path d="M1500,0 Q1480,150 1540,300 Q1580,400 1500,480" stroke="url(#branch)" stroke-width="9" opacity=".4"/>
+    <path d="M1550,0 Q1600,100 1520,250 Q1480,350 1580,450" stroke="url(#branch2)" stroke-width="5" opacity=".35"/>
+    <path d="M100,0 Q80,50 120,120 Q150,180 100,250" stroke="url(#branch)" stroke-width="6" opacity=".35"/>
+    <path d="M1800,0 Q1780,80 1820,180 Q1850,260 1800,350" stroke="url(#branch2)" stroke-width="8" opacity=".35"/>
+    <path d="M800,0 Q820,80 780,150 Q750,200 810,280" stroke="url(#branch)" stroke-width="4" opacity=".3"/>
+    <path d="M700,0 Q680,50 720,120" stroke="url(#branch2)" stroke-width="3" opacity=".25"/>
+  </g>
+  <g fill="#2d6a4f" opacity=".08">
+    <ellipse cx="280" cy="280" rx="60" ry="30" transform="rotate(-20,280,280)"/>
+    <ellipse cx="320" cy="350" rx="45" ry="25" transform="rotate(10,320,350)"/>
+    <ellipse cx="600" cy="220" rx="50" ry="28" transform="rotate(-15,600,220)"/>
+    <ellipse cx="1200" cy="320" rx="70" ry="35" transform="rotate(10,1200,320)"/>
+    <ellipse cx="1500" cy="280" rx="55" ry="30" transform="rotate(-15,1500,280)"/>
+    <ellipse cx="350" cy="180" rx="40" ry="20"/>
+    <ellipse cx="1250" cy="200" rx="45" ry="22"/>
+    <ellipse cx="1550" cy="250" rx="35" ry="18"/>
+  </g>
+  <g fill="#8a7563" opacity=".07">
+    <path d="M0,1080 Q100,1050 200,1060 Q300,1070 350,1040 Q400,1010 450,1030 Q500,1050 600,1040 Q700,1030 800,1050 Q900,1070 1000,1040 Q1100,1010 1200,1030 Q1300,1050 1400,1040 Q1500,1030 1600,1050 Q1700,1070 1800,1040 Q1900,1010 1920,1030 L1920,1080 Z"/>
+  </g>
+</svg>

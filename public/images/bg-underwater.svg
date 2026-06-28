@@ -1,0 +1,41 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="kelp" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity=".15"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke-linecap="round">
+    <path d="M100,1080 Q120,800 80,600 Q60,450 120,300" stroke="url(#kelp)" stroke-width="6" opacity=".5"/>
+    <path d="M160,1080 Q200,750 140,550 Q100,400 180,250" stroke="url(#kelp)" stroke-width="4" opacity=".4"/>
+    <path d="M300,1080 Q280,700 340,500 Q380,350 300,200" stroke="url(#coral)" stroke-width="8" opacity=".5"/>
+    <path d="M1700,1080 Q1820,750 1780,500 Q1750,350 1850,200" stroke="url(#kelp)" stroke-width="5" opacity=".4"/>
+    <path d="M1850,1080 Q1800,800 1880,600 Q1900,450 1820,300" stroke="url(#coral)" stroke-width="7" opacity=".5"/>
+    <path d="M350,1080 Q400,850 320,700 Q280,550 380,400" stroke="url(#kelp)" stroke-width="3" opacity=".3"/>
+    <path d="M1550,1080 Q1500,800 1600,600 Q1650,450 1520,300" stroke="url(#coral)" stroke-width="4" opacity=".35"/>
+    <path d="M1920,1080 Q1860,700 1900,400 Q1920,200 1880,50" stroke="url(#kelp)" stroke-width="10" opacity=".3"/>
+    <path d="M0,1080 Q50,600 20,200 Q10,100 60,50" stroke="url(#coral)" stroke-width="8" opacity=".25"/>
+    <path d="M500,1080 Q520,900 480,750 Q460,650 540,500" stroke="url(#kelp)" stroke-width="3" opacity=".25"/>
+    <path d="M1400,1080 Q1380,850 1450,650 Q1480,500 1350,350" stroke="url(#coral)" stroke-width="5" opacity=".3"/>
+  </g>
+  <g fill="#00d4ff" opacity=".1">
+    <circle cx="120" cy="400" r="4"/>
+    <circle cx="160" cy="350" r="2.5"/>
+    <circle cx="100" cy="300" r="3"/>
+    <circle cx="180" cy="250" r="2"/>
+    <circle cx="150" cy="200" r="1.5"/>
+    <circle cx="1850" cy="500" r="3"/>
+    <circle cx="1820" cy="420" r="2"/>
+    <circle cx="1880" cy="350" r="1.5"/>
+  </g>
+  <g fill="#7c3aed" opacity=".08">
+    <path d="M280,1080 Q300,1000 350,950 Q380,920 400,880 Q420,850 350,800 Q300,780 320,720" opacity=".6"/>
+    <path d="M1650,1080 Q1620,950 1680,900 Q1720,870 1700,820 Q1680,780 1750,740" opacity=".5"/>
+    <path d="M1920,900 Q1860,880 1880,840 Q1900,800 1850,760" opacity=".4"/>
+    <path d="M0,850 Q40,800 20,750 Q0,700 50,650" opacity=".4"/>
+  </g>
+</svg>
