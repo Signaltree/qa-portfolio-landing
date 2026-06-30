@@ -4,44 +4,41 @@ import './App.css'
 /* ─── Data ─── */
 
 const terminalLines = [
+  { text: '$ ./portfolio --whoami', type: 'pr' },
+  { text: '  Alejandro Adriazola', type: 'mt' },
+  { text: '  Analista Programador / QA Automation', type: 'mt' },
+  { text: '  TypeScript · Java · Python · Bash', type: 'ps' },
+  { text: '', type: '' },
   { text: '$ npm run test:portfolio', type: 'pr' },
   { text: '', type: '' },
-  { text: '> Playwright .................. 38/38 passed  \u2713', type: 'ps' },
-  { text: '> Karate ..................... 82/82 passed  \u2713', type: 'ps' },
-  { text: '> REST Assured ............... 18/18 passed  \u2713', type: 'ps' },
-  { text: '> BDD-Cucumber ............... 12/12 passed  \u2713', type: 'ps' },
-  { text: '> Appium ..................... 7/7 passed    \u2713', type: 'ps' },
   { text: '> Selenium WebDriver ......... 22/22 passed  \u2713', type: 'ps' },
+  { text: '> Playwright .................. 38/38 passed  \u2713', type: 'ps' },
+  { text: '> Cypress ..................... 19/19 passed  \u2713', type: 'ps' },
   { text: '> Flutter / iOS .............. 7/7 passed    \u2713', type: 'ps' },
   { text: '', type: '' },
   { text: '\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500', type: 'dv' },
-  { text: '  Result: 186 tests passed  \u2713', type: 'sm' },
-  { text: '  Duration: 22s', type: 'mt' },
-  { text: '  Coverage: 92%', type: 'mt' },
+  { text: '  Result: 86 tests passed  \u2713', type: 'sm' },
+  { text: '  Selenium + Playwright + Cypress + Flutter', type: 'mt' },
+  { text: '  CI/CD con GitHub Actions', type: 'mt' },
 ]
 
 const frameworks = [
-  { name:'Playwright', tech:'TypeScript / SauceDemo', pass:38, tests:[{l:'Funcionales UI',c:12},{l:'Intercepci\u00f3n de red',c:8},{l:'Regresi\u00f3n visual',c:8},{l:'Seguridad OWASP',c:10}], repo:'https://github.com/Signaltree/qa-automation-portfolio/tree/main/playwright', back:'La l\u00ednea entre testing funcional y visual es falsa. Playwright controla navegadores reales, no los simula. Por eso captura problemas que un test de l\u00f3gica pura nunca ver\u00eda.' },
-  { name:'Karate', tech:'Java / JSONPlaceholder + GraphQL', pass:82, tests:[{l:'CRUD Posts',c:20},{l:'CRUD Users',c:12},{l:'Auth y autorizaci\u00f3n',c:6},{l:'OWASP Top 10',c:14},{l:'Contrato CSIRT',c:5},{l:'GraphQL',c:7}], repo:'https://github.com/Signaltree/qa-automation-portfolio/tree/main/karate', back:'OWASP Top 10, GraphQL, contratos CSIRT en un solo archivo. Karate demuestra que la divisi\u00f3n entre tipos de prueba suele ser administrativa, no t\u00e9cnica.' },
-  { name:'REST Assured', tech:'Java / JSONPlaceholder', pass:18, tests:[{l:'Validaciones GET',c:4},{l:'Validaciones POST',c:3},{l:'Validaciones PUT',c:3},{l:'Validaciones DELETE',c:3},{l:'JSON Schema',c:2},{l:'POJO + Hamcrest',c:3}], repo:'https://github.com/Signaltree/qa-automation-portfolio/tree/main/rest-assured', back:'Java no es elegante para APIs, pero con los matchers correctos cierra esa brecha. No necesit\u00e1s Postman ni curl cuando tu producto ya vive en Java.' },
-  { name:'Cucumber BDD', tech:'Java / Selenium / SauceDemo', pass:12, tests:[{l:'Features login',c:3},{l:'Features inventario',c:3},{l:'Features carro',c:3},{l:'Features checkout',c:3}], repo:'https://github.com/Signaltree/qa-automation-portfolio/tree/main/bdd-cucumber', back:'Gherkin obliga a preguntar qu\u00e9 deber\u00eda pasar antes de escribir c\u00f3digo. El valor no est\u00e1 en los tests sino en la conversaci\u00f3n que generan antes de existir.' },
-  { name:'Appium', tech:'Java / Wikipedia (Android)', pass:7, tests:[{l:'B\u00fasqueda b\u00e1sica',c:1},{l:'Validaci\u00f3n resultados',c:2},{l:'Navegaci\u00f3n art\u00edculos',c:2},{l:'Interfaz m\u00f3vil',c:2}], repo:'https://github.com/Signaltree/qa-automation-portfolio/tree/main/appium', back:'Un solo API para Android y iOS. Appium demuestra que el testing mobile no deber\u00eda requerir dos frameworks, dos equipos ni dos formas de pensar.' },
-  { name:'Selenium WebDriver', tech:'Java / SauceDemo + the-internet', pass:22, tests:[{l:'Navegaci\u00f3n y waits',c:4},{l:'Multi-browser',c:3},{l:'Interacci\u00f3n avanzada',c:4},{l:'Ventanas y frames',c:4},{l:'JavaScript',c:4},{l:'Page Object Model',c:3}], repo:'https://github.com/Signaltree/qa-automation-portfolio/tree/main/selenium-webdriver', back:'No innova, pero corre donde otros fallan. Es la navaja suiza del testing web: no la m\u00e1s filosa, pero la que siempre funciona.' },
-  { name:'Flutter / iOS', tech:'Dart / Flutter (integration_test)', pass:7, tests:[{l:'Renderizado inicial',c:1},{l:'Contador',c:2},{l:'Incrementos m\u00faltiples',c:1},{l:'CRUD todos',c:3}], repo:'https://github.com/Signaltree/qa-automation-portfolio/tree/main/flutter_app', back:'El widget tree elimina la capa m\u00e1s fr\u00e1gil del testing UI: los selectores. Cuando el framework entiende tu app al mismo nivel que vos, los tests se vuelven obvios.' },
+  { name:'Selenium WebDriver', tech:'Java / SauceDemo + the-internet', pass:22, tests:[{l:'Navegaci\u00f3n y waits',c:4},{l:'Multi-browser',c:3},{l:'Interacci\u00f3n avanzada',c:4},{l:'Ventanas y frames',c:4},{l:'JavaScript',c:4},{l:'Page Object Model',c:3}], repo:'https://github.com/Signaltree/qa-automation-portfolio/tree/main/selenium-webdriver', back:'Problema: necesitaba demostrar automatizaci\u00f3n cl\u00e1sica sin depender de Playwright. \u2192 22 tests en 6 categor\u00edas (waits, multi-browser, drag-drop, frames, JavaScript, POM) contra dos apps reales. Chrome/Firefox/Edge con detecci\u00f3n autom\u00e1tica de binarios.' },
+  { name:'Playwright', tech:'TypeScript / SauceDemo', pass:38, tests:[{l:'Funcionales UI',c:12},{l:'Intercepci\u00f3n de red',c:8},{l:'Regresi\u00f3n visual',c:8},{l:'Seguridad OWASP',c:10}], repo:'https://github.com/Signaltree/qa-automation-portfolio/tree/main/playwright', back:'Problema: bugs visuales y de seguridad llegaban a producci\u00f3n con tests funcionales tradicionales. \u2192 Implement\u00e9 38 tests con 6 tipos de usuario, intercepci\u00f3n de red, regresi\u00f3n visual (5% umbral), accesibilidad axe-core WCAG AA y OWASP Top 10 mapeado a la Ley 21.663. Cobertura total en un solo framework.' },
+  { name:'Cypress', tech:'JavaScript / SauceDemo', pass:19, tests:[{l:'Login',c:3},{l:'Inventario',c:4},{l:'Carro de compras',c:4},{l:'Checkout',c:4},{l:'Men\u00fa lateral',c:2},{l:'Estados de error',c:2}], repo:'https://github.com/Signaltree/qa-automation-portfolio/tree/main/cypress', back:'Problema: tests E2E fr\u00e1giles en CI con timeouts y selectores din\u00e1micos. \u2192 Cypress con retry-ability, custom commands y espera autom\u00e1tica. 19 tests sobre SauceDemo: login, inventario, carro, checkout, men\u00fa lateral y estados de error.' },
+  { name:'Flutter / iOS', tech:'Dart / Flutter (integration_test)', pass:7, tests:[{l:'Renderizado inicial',c:1},{l:'Contador',c:2},{l:'Incrementos m\u00faltiples',c:1},{l:'CRUD todos',c:3}], repo:'https://github.com/Signaltree/qa-automation-portfolio/tree/main/flutter_app', back:'Problema: selectores XPath/CSS no funcionan en el widget tree de Flutter. \u2192 7 tests con integration_test para contador (state) y CRUD de todos. Sin selectores fr\u00e1giles \u2014 el framework entiende tu UI al mismo nivel que t\u00fa.' },
 ]
 
 const processSteps = [
-  { cmd:'plan', label:'Cobertura', desc:'Define qué cubrimos, qué omitimos y por qué. Sin plan, los tests corren pero no tienen dirección: pasan o fallan sin contar nada sobre el sistema.', tools:['Jira','Gherkin','POM','Casos de prueba'] },
-  { cmd:'test', label:'Hipótesis', desc:'Cada test pregunta algo al sistema: dado un estado y una acción, el resultado debe coincidir con lo esperado. Si no puede fallar de forma reveladora, no aporta.', tools:['Playwright','Selenium','Karate','Appium','GitHub Actions'] },
-  { cmd:'report', label:'Cierre', desc:'Responde tres preguntas: qué pasó, qué riesgo queda, qué se hace ahora. Sin reporte los tests son ruido. El reporte convierte ejecución en información.', tools:['Allure','GitHub Pages','README'] },
+  { cmd:'plan', label:'Planificación', desc:'Analizo la base de pruebas para identificar condiciones y criterios de entrada/salida. Priorizo según riesgo y defino alcance: qué probar, con qué nivel y cuándo detenerse.', tools:['ISTQB','Jira','Gherkin','Análisis de riesgo','Criterios de salida'] },
+  { cmd:'test', label:'Ejecución', desc:'Diseño casos con partición de equivalencias y valores límite. Ejecuto procedimientos, comparo real contra esperado y registro desviaciones con trazabilidad al requisito.', tools:['Playwright','Selenium','Cypress','Flutter','GitHub Actions'] },
+  { cmd:'report', label:'Reporte', desc:'Consolido resultados contra criterios de salida, evalúo riesgo residual y genero recomendaciones. El informe documenta qué se probó, qué defectos quedan y qué riesgo asume el negocio.', tools:['Allure','GitHub Pages','Informe de cierre','Lecciones aprendidas'] },
 ]
 
 const skillCategories = [
-  { t:'Automatizaci\u00f3n', i:['Playwright','Selenium','Karate','REST Assured','Cucumber','Appium','Flutter'] },
-  { t:'API y Rendimiento', i:['Postman','JMeter','k6','REST APIs','GraphQL'] },
+  { t:'Testing', i:['Selenium','Playwright','Cypress','Flutter','Postman','JMeter','k6','Allure'] },
   { t:'Lenguajes', i:['TypeScript','JavaScript','Java','Dart','Python','SQL','Bash'] },
-  { t:'CI/CD y DevOps', i:['GitHub Actions','Docker','Ansible','Git','Linux','Selenium Grid'] },
-  { t:'Herramientas', i:['Jira','Agile/Scrum','Kanban','BDD','POM','Allure'] },
+  { t:'Infra', i:['GitHub Actions','Docker','Git','Linux','Jira','BDD','POM'] },
 ]
 
 const experiences = [
@@ -57,14 +54,8 @@ const certifications = [
   { name:'ISTQB Foundation Level', issuer:'International Software Testing', st:'Preparaci\u00f3n' },
 ]
 
-const stats = [
-  { num:'186', label:'tests automatizados', cls:'green' },
-  { num:'7', label:'frameworks', cls:'accent' },
-  { num:'3', label:'lenguajes', cls:'' },
-  { num:'100%', label:'pass rate', cls:'green' },
-]
-
 const navLinks = [
+  { label:'Sobre m\u00ed', id:'about' },
   { label:'Tests', id:'frameworks' },
   { label:'Proceso', id:'process' },
   { label:'Stack', id:'skills' },
@@ -97,32 +88,6 @@ function useReveal(threshold = .15) {
     return () => o.disconnect()
   }, [threshold])
   return [ref, v]
-}
-
-function useCountUp(end) {
-  const [c, setC] = useState(0)
-  const ref = useRef(null)
-  const done = useRef(false)
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const o = new IntersectionObserver(([e]) => {
-      if (e.isIntersecting && !done.current) {
-        done.current = true
-        const t0 = performance.now()
-        const step = (now) => {
-          const t = Math.min((now - t0) / 1200, 1)
-          setC(Math.floor(t * end))
-          if (t < 1) requestAnimationFrame(step)
-        }
-        requestAnimationFrame(step)
-        o.unobserve(el)
-      }
-    }, { threshold: .5 })
-    o.observe(el)
-    return () => o.disconnect()
-  }, [end])
-  return [ref, c]
 }
 
 function useTypewriter() {
@@ -176,28 +141,6 @@ function useMagnetic(strength = .25) {
   return ref
 }
 
-function useTilt(max = 6) {
-  const ref = useRef(null)
-  useEffect(() => {
-    const el = ref.current
-    if (!el || !matchMedia('(pointer: fine)').matches) return
-    const move = (e) => {
-      const r = el.getBoundingClientRect()
-      const x = (e.clientX - r.left) / r.width
-      const y = (e.clientY - r.top) / r.height
-      el.style.transform = `rotateX(${(y - .5) * -max}deg) rotateY(${(x - .5) * max}deg)`
-    }
-    const leave = () => { el.style.transform = '' }
-    el.addEventListener('mousemove', move, { passive: true })
-    el.addEventListener('mouseleave', leave, { passive: true })
-    return () => {
-      el.removeEventListener('mousemove', move)
-      el.removeEventListener('mouseleave', leave)
-    }
-  }, [max])
-  return ref
-}
-
 /* ─── Utils ─── */
 
 function scrollTo(id) {
@@ -205,20 +148,6 @@ function scrollTo(id) {
 }
 
 /* ─── Components ─── */
-
-function CursorGlow() {
-  const ref = useRef(null)
-  useEffect(() => {
-    const el = ref.current
-    if (!el || !matchMedia('(pointer: fine)').matches) return
-    const move = (e) => {
-      el.style.transform = `translate(${e.clientX - 150}px, ${e.clientY - 150}px)`
-    }
-    window.addEventListener('mousemove', move, { passive: true })
-    return () => window.removeEventListener('mousemove', move)
-  }, [])
-  return <div ref={ref} className="cursor-glow" />
-}
 
 function ScrollBar() {
   const y = useScrollTop()
@@ -305,25 +234,6 @@ function Stagger({ children, className = '' }) {
   return <div ref={ref} className={`stagger${v ? ' in' : ''} ${className}`}>{children}</div>
 }
 
-function Parallax({ speed = .3, className = '', children }) {
-  const ref = useRef(null)
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    let raf = null
-    const update = () => { el.style.transform = `translateY(${window.scrollY * speed}px)` }
-    const onScroll = () => {
-      if (!raf) { raf = requestAnimationFrame(() => { update(); raf = null }) }
-    }
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => {
-      window.removeEventListener('scroll', onScroll)
-      if (raf) cancelAnimationFrame(raf)
-    }
-  }, [speed])
-  return <div ref={ref} className={className}>{children}</div>
-}
-
 function Hero() {
   const [text, done] = useTypewriter()
   const bootLines = text.split('\n')
@@ -356,7 +266,7 @@ function Hero() {
       { text: '  cv        — Ver CV', type: 'mt' },
       { text: '  clear     — Limpiar terminal', type: 'mt' },
     ])
-    else if (t === 'about') setHistory(p => [...p, { text: 'Analista Programador INACAP. Automatizo 5 frameworks: interfaz web, API REST, mobile y contratos. Todo corre en CI/CD.', type: 'mt' }])
+    else if (t === 'about') setHistory(p => [...p, { text: 'Llegué al testing desde los datos. Analista Programador INACAP · Selenium, Playwright, Cypress, Flutter · TypeScript, Java, Python · Cloud, datos, Agile · Inglés C1.', type: 'mt' }])
     else if (t === 'projects' || t === 'tests') setHistory(p => [...p, ...frameworks.map(f => ({ text: `  ${f.name.padEnd(14)} ${f.pass}/${f.pass} passed`, type: 'ps' }))])
     else if (t === 'skills') setHistory(p => [...p, ...skillCategories.map(c => ({ text: `  ${c.t}: ${c.i.join(', ')}`, type: 'mt' }))])
     else if (t === 'contact') setHistory(p => [...p,
@@ -374,13 +284,12 @@ function Hero() {
 
   return (
     <section className="hero" id="top" onClick={() => inputRef.current?.focus()}>
-      <Parallax className="hero-bg" />
       <div className="noise" />
       <div className="hero-content">
         <div className="terminal">
           <div className="terminal-bar">
             <span className="terminal-dot r" /><span className="terminal-dot y" /><span className="terminal-dot g" />
-            <span className="terminal-title">bash — npm run test:portfolio</span>
+            <span className="terminal-title">bash — ./portfolio --run</span>
           </div>
           <div className="terminal-body" ref={bodyRef}>
             {display.map((line, i) => (
@@ -413,28 +322,6 @@ function Hero() {
   )
 }
 
-function StatsSection() {
-  return (
-    <Reveal>
-      <div className="stats-wrap">
-        {stats.map((s, i) => <StatItem key={i} {...s} />)}
-      </div>
-    </Reveal>
-  )
-}
-
-function StatItem({ num, label, cls }) {
-  const val = parseInt(num) || 0
-  const sfx = num.includes('+') ? '+' : num.includes('%') ? '%' : ''
-  const [ref, c] = useCountUp(val)
-  return (
-    <div className="stat-item">
-      <div ref={ref} className={`stat-num ${cls}`}>{c}{sfx}</div>
-      <div className="stat-label">{label}</div>
-    </div>
-  )
-}
-
 function About() {
   const BASE = import.meta.env.BASE_URL || '/'
   return (
@@ -449,16 +336,26 @@ function About() {
             <h2>Alejandro Eduardo Adriazola Sorhaburu</h2>
             <div className="tag">Analista Programador / QA Automation</div>
             <p>
-              Analista Programador titulado en INACAP. Automatizo pruebas funcionales,
-              de API, mobile y regresión visual en cinco frameworks. Trabajo con
-              TypeScript, Java, Python y Bash en pipelines CI/CD con GitHub Actions.
-              Mi experiencia combina infraestructura cloud, administración de bases
-              de datos y testing en entornos Agile. Inglés avanzado C1.
+              Llegué al testing desde los datos. Trabajé como analista en
+              Conectados (WOM), donde empecé a automatizar procesos repetitivos
+              con scripts y me di cuenta de que me gustaba más encontrar bugs
+              que reportarlos. Eso me llevó a titularme de Analista Programador
+              en INACAP, y hoy sigo especializándome con la Ingeniería en
+              Informática.
+            </p>
+            <p style={{marginTop:'.5rem',fontSize:'.8125rem',color:'var(--text-secondary)',fontWeight:300,lineHeight:1.7}}>
+              Trabajo con Selenium, Playwright, Cypress y Flutter. Programo en
+              TypeScript, Java y Python. También hago infraestructura cloud,
+              bases de datos y equipos Agile. Inglés C1.
+            </p>
+            <p style={{marginTop:'.4rem',fontSize:'.75rem',color:'var(--text-secondary)',fontWeight:300,lineHeight:1.7,fontStyle:'italic'}}>
+              — entender cómo funcionan los sistemas para encontrar lo que no
+              funciona antes de que llegue a producción.
             </p>
             <div className="about-links">
-              <a href="https://github.com/Signaltree" target="_blank" rel="noreferrer noopener">🐙 GitHub</a>
-              <a href="https://www.linkedin.com/in/aadriazola/" target="_blank" rel="noreferrer noopener">💼 LinkedIn</a>
-              <a href={`${BASE}cv.html`} target="_blank" rel="noreferrer noopener">📄 Ver CV</a>
+              <a href="https://github.com/Signaltree" target="_blank" rel="noreferrer noopener">GitHub</a>
+              <a href="https://www.linkedin.com/in/aadriazola/" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+              <a href={`${BASE}cv.html`} target="_blank" rel="noreferrer noopener">CV</a>
             </div>
           </div>
         </div>
@@ -470,7 +367,7 @@ function About() {
 function Frameworks() {
   return (
     <section id="frameworks">
-      <Reveal d={1}><div className="section-header"><h2>Tests — 7 frameworks</h2><p>186 tests automatizados. Ninguno falla.</p></div></Reveal>
+      <Reveal d={1}><div className="section-header"><h2>Tests</h2><p>Selenium + Playwright + Cypress + Flutter · 86 tests automatizados</p></div></Reveal>
       <Stagger className="fw-grid">
         {frameworks.map((fw, i) => <FWCard key={i} fw={fw} />)}
       </Stagger>
@@ -479,10 +376,9 @@ function Frameworks() {
 }
 
 function FWCard({ fw }) {
-  const tiltRef = useTilt()
   const repoRef = useMagnetic()
   return (
-    <div ref={tiltRef} className="fw-card">
+    <div className="fw-card">
       <div className="fw-flip-area">
         <div className="fw-front">
           <div className="fw-head">
@@ -502,23 +398,11 @@ function FWCard({ fw }) {
           </div>
         </div>
         <div className="fw-back">
-          <div className="fw-head">
-            <div className="fw-name">
-              <h3>{fw.name}</h3>
-              <div className="fw-tech">{fw.tech}</div>
-            </div>
-            <span className="fw-badge pass">{fw.pass}/{fw.pass} passed</span>
-          </div>
           <p className="fw-desc">{fw.back}</p>
-          <div className="fw-tag-row">
-            <span className="fw-tag">CI/CD</span>
-            <span className="fw-tag">POM</span>
-            <span className="fw-tag">Allure</span>
-          </div>
         </div>
       </div>
       <a href={fw.repo} ref={repoRef} target="_blank" rel="noreferrer noopener" className="fw-repo magnetic">
-        🐙 repositorio
+        repositorio
       </a>
     </div>
   )
@@ -538,9 +422,8 @@ function Process() {
 }
 
 function ProcessCmd({ cmd, label, desc, tools, i, expanded, setExpanded }) {
-  const tiltRef = useTilt(4)
   return (
-    <div ref={tiltRef} className={`process-cmd${expanded === i ? ' expanded' : ''}`}
+    <div className={`process-cmd${expanded === i ? ' expanded' : ''}`}
          onClick={() => setExpanded(expanded === i ? null : i)}
          role="button" tabIndex={0}
          onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setExpanded(expanded === i ? null : i) }}>
@@ -560,17 +443,17 @@ function ProcessCmd({ cmd, label, desc, tools, i, expanded, setExpanded }) {
 function Skills() {
   return (
     <section id="skills">
-      <Reveal d={1}><div className="section-header"><h2>Stack técnico</h2><p>Herramientas que uso en proyectos reales.</p></div></Reveal>
-      <div className="skills-grid">
+      <Reveal d={1}><div className="section-header"><h2>Stack técnico</h2></div></Reveal>
+      <Stagger className="fw-grid">
         {skillCategories.map((cat, i) => (
-          <Reveal key={i} d={Math.min(i + 1, 4)}>
-            <div className="skill-cat">
-              <h4>{cat.t}</h4>
+          <div key={i} className="fw-card skill-card">
+            <div className="skill-card-inner">
+              <h3>{cat.t}</h3>
               <div className="skill-badges">{cat.i.map((x, j) => <span key={j}>{x}</span>)}</div>
             </div>
-          </Reveal>
+          </div>
         ))}
-      </div>
+      </Stagger>
     </section>
   )
 }
@@ -578,7 +461,7 @@ function Skills() {
 function Experience() {
   return (
     <section id="experience">
-      <Reveal d={1}><div className="section-header"><h2>Trayectoria</h2><p>Infraestructura, datos y automatización en entornos empresariales.</p></div></Reveal>
+      <Reveal d={1}><div className="section-header"><h2>Trayectoria</h2><p>Soporte cloud, análisis de datos y automation en producción.</p></div></Reveal>
       <Stagger className="exp-list">
         {experiences.map((ex, i) => <ExpItem key={i} {...ex} />)}
       </Stagger>
@@ -587,9 +470,8 @@ function Experience() {
 }
 
 function ExpItem({ co, role, period, d }) {
-  const tiltRef = useTilt(3)
   return (
-    <div ref={tiltRef} className="exp-item">
+    <div className="exp-item">
       <div className="exp-hdr">
         <div className="exp-co">
           <h3>{co}</h3>
@@ -628,11 +510,11 @@ function Contact() {
       <Reveal d={2}>
         <div className="contact-wrap">
           <div className="contact-links">
-            <a href="mailto:ale.edu.adriazola@gmail.com">✉ ale.edu.adriazola@gmail.com</a>
-            <a href="https://wa.me/56964362078" target="_blank" rel="noreferrer noopener">☎ +56 9 6436 2078</a>
-            <a href="https://github.com/Signaltree" target="_blank" rel="noreferrer noopener">🐙 GitHub</a>
-            <a href="https://www.linkedin.com/in/aadriazola/" target="_blank" rel="noreferrer noopener">💼 LinkedIn</a>
-            <a href={`${import.meta.env.BASE_URL || '/'}cv.html`} target="_blank" rel="noreferrer noopener">📄 CV</a>
+            <a href="mailto:ale.edu.adriazola@gmail.com">ale.edu.adriazola@gmail.com</a>
+            <a href="https://wa.me/56964362078" target="_blank" rel="noreferrer noopener">+56 9 6436 2078</a>
+            <a href="https://github.com/Signaltree" target="_blank" rel="noreferrer noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/aadriazola/" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+            <a href={`${import.meta.env.BASE_URL || '/'}cv.html`} target="_blank" rel="noreferrer noopener">CV</a>
           </div>
         </div>
       </Reveal>
@@ -643,7 +525,7 @@ function Contact() {
 function Footer() {
   return (
     <footer>
-      <p>OpenCode · Vite + React · JetBrains Mono + Inter</p>
+      <p>Portfolio QA Automation · Chile · 2026</p>
     </footer>
   )
 }
@@ -653,11 +535,9 @@ function Footer() {
 export default function App() {
   return (
     <>
-      <CursorGlow />
       <ScrollBar />
       <Nav />
       <Hero />
-      <StatsSection />
       <About />
       <Frameworks />
       <Process />
