@@ -37,6 +37,7 @@ h1 span{color:#3a6b35}
   margin-top:.5rem;font-size:.8rem;color:#555;
 }
 .contact-row span{display:inline-flex;align-items:center;gap:.3rem}
+.contact-row a{color:inherit;text-decoration:none}
 
 /* ─── Grid ─── */
 .grid{display:grid;grid-template-columns:1fr 2fr;gap:2rem}
@@ -95,7 +96,7 @@ h1 span{color:#3a6b35}
   font-size:.78rem;color:#444;line-height:1.5;
   padding:.15rem 0 .15rem 1rem;position:relative;
 }
-.exp-item ul li::before{content:'•';position:absolute;left:0;color:#3a6b35}
+.exp-item ul li::before{content:'\2022';position:absolute;left:0;color:#3a6b35}
 
 /* Projects */
 .proj-item{margin-bottom:.75rem}
@@ -148,7 +149,7 @@ h1 span{color:#3a6b35}
 <body>
 
 <div class="no-print">
-  <button onclick="window.print()">📥 Descargar PDF</button>
+  <button onclick="window.print()">Descargar PDF</button>
   <p style="font-size:.75rem;color:#888;margin-top:.5rem">Se abrirá el diálogo de impresión. Selecciona "Guardar como PDF".</p>
 </div>
 
@@ -158,12 +159,12 @@ h1 span{color:#3a6b35}
   <h1>Alejandro <span>Adriazola</span></h1>
   <div class="subtitle">Analista Programador · QA Automation</div>
   <div class="contact-row">
-    <span>📧 ale.edu.adriazola@gmail.com</span>
-    <span><a href="https://wa.me/56964362078" target="_blank" rel="noreferrer" style="color:inherit;text-decoration:none">📞 +56 9 6436 2078</a></span>
-    <span>📍 Santiago, Chile</span>
-    <span>🔗 linkedin.com/in/aadriazola/</span>
-    <span>🐙 github.com/Signaltree</span>
-    <span>🌐 signaltree.github.io/qa-portfolio-landing</span>
+    <span>ale.edu.adriazola@gmail.com</span>
+    <span><a href="https://wa.me/56964362078" target="_blank" rel="noreferrer">+56 9 6436 2078</a></span>
+    <span>Santiago, Chile</span>
+    <span>linkedin.com/in/aadriazola</span>
+    <span>github.com/Signaltree</span>
+    <span>signaltree.github.io/qa-portfolio-landing</span>
   </div>
 </header>
 
@@ -175,28 +176,16 @@ h1 span{color:#3a6b35}
   <div class="block">
     <h3>Skills Técnicos</h3>
     <div class="skill-group">
-      <h4>Test Automation</h4>
-      <p>Playwright · Karate · Selenium WebDriver · REST Assured · Cucumber BDD · Appium</p>
-    </div>
-    <div class="skill-group">
-      <h4>API & Performance</h4>
-      <p>Postman · JMeter · Gatling · REST APIs · GraphQL</p>
+      <h4>Testing</h4>
+      <p>Selenium WebDriver · Playwright · Cypress · Flutter · Karate · REST Assured · Cucumber BDD · Appium · Postman · JMeter · k6</p>
     </div>
     <div class="skill-group">
       <h4>Lenguajes</h4>
-      <p>TypeScript · JavaScript · Java · Python · SQL · Bash</p>
+      <p>TypeScript · JavaScript · Java · Dart · Python · SQL · Bash</p>
     </div>
     <div class="skill-group">
-      <h4>CI/CD & DevOps</h4>
-      <p>GitHub Actions · Docker · Ansible · Git · Linux (RedHat/CentOS) · Selenium Grid</p>
-    </div>
-    <div class="skill-group">
-      <h4>Seguridad</h4>
-      <p>OWASP Top 10 · SonarQube · Kali Linux · Ley 21.663</p>
-    </div>
-    <div class="skill-group">
-      <h4>Herramientas</h4>
-      <p>Jira · Agile/Scrum · Kanban · BDD · POM · Allure · ERP QAD</p>
+      <h4>Infra</h4>
+      <p>GitHub Actions · Docker · Git · Linux · Allure · Jira · ISTQB · BDD · POM</p>
     </div>
   </div>
 
@@ -231,12 +220,17 @@ h1 span{color:#3a6b35}
     <h3>Perfil Profesional</h3>
     <div class="profile">
       <p>
-        Analista Programador titulado en INACAP. Automatizo pruebas de software,
-        administro infraestructura cloud y analizo datos. Entregué un portafolio QA con
-        186 pruebas en siete frameworks (Playwright, Karate, REST Assured, Cucumber BDD,
-        Appium, Selenium WebDriver y Flutter). Las pruebas cubren funcionalidad, API,
-        regresión visual, carga, mobile y contratos. Inglés avanzado C1. Busco aportar
-        rigurosidad técnica y metodologías ágiles al área de calidad.
+        Analista Programador titulado en INACAP, donde curso Ingeniería en Informática.
+        Llegué al testing desde los datos: trabajé como analista en Conectados (WOM)
+        automatizando procesos con scripts, lo que me llevó a especializarme en QA Automation.
+      </p>
+      <p style="margin-top:.5rem">
+        Mantengo un portafolio con 205 pruebas automatizadas en 8 frameworks: Selenium
+        WebDriver, Playwright, Cypress, Karate, REST Assured, Cucumber BDD, Appium y
+        Flutter. Aplico el proceso ISTQB: planificación con análisis de riesgo, diseño
+        con partición de equivalencias y valores límite, ejecución en CI/CD y reporte
+        con evaluación de criterios de salida. Trabajo con TypeScript, Java, Python y
+        Bash en GitHub Actions. Inglés avanzado C1.
       </p>
     </div>
   </div>
@@ -245,14 +239,16 @@ h1 span{color:#3a6b35}
     <h3>Proyecto Destacado</h3>
     <div class="proj-item">
       <h4>QA Automation Portfolio</h4>
-      <div class="stack">5 frameworks · CI/CD · Landing page · GitHub Pages</div>
+      <div class="stack">8 frameworks · 205 tests · CI/CD · Landing page interactiva</div>
       <p>
-        Monorepo de automatización QA con 7 módulos independientes y una landing page
-        en GitHub Pages. Diseñé cada suite contra aplicaciones demo reales (SauceDemo,
-        JSONPlaceholder, Wikipedia Android, apps Flutter) con Page Object Model, principios
-        de código limpio y reportes Allure. GitHub Actions compila, ejecuta y genera
-        reportes en cada push. La landing page muestra proyectos, skills, experiencia y
-        un CV descargable con terminal interactiva tipo bash.
+        Monorepo de automatización QA con 8 módulos independientes y una landing page
+        desplegada en GitHub Pages. Cypress (19 tests E2E con retry-ability), Playwright
+        (38 tests con regresión visual y OWASP Top 10), Selenium WebDriver (22 tests
+        multi-browser), Karate (82 tests API), REST Assured (18), Cucumber BDD (12),
+        Appium (7 mobile) y Flutter (7 integration_test). Cada suite sigue Page Object
+        Model sobre aplicaciones demo reales. CI/CD con GitHub Actions y reportes Allure.
+        Landing page con terminal interactiva tipo bash, CV descargable y proceso basado
+        en ISTQB.
         <br><a href="https://github.com/Signaltree/qa-automation-portfolio" target="_blank">github.com/Signaltree/qa-automation-portfolio</a>
         <br><a href="https://signaltree.github.io/qa-portfolio-landing/" target="_blank">signaltree.github.io/qa-portfolio-landing</a>
       </p>
@@ -283,11 +279,10 @@ h1 span{color:#3a6b35}
       </div>
       <div class="exp-role">Analista de Datos / Back Office (Cliente WOM)</div>
       <ul>
-        <li>Diseñé y ejecuté casos de prueba funcionales, de regresión e integración en ciclos Agile Scrum.</li>
+        <li>Diseñé y ejecuté casos de prueba funcionales, de regresión e integración en ciclos Agile Scrum con Jira.</li>
         <li>Automaticé pruebas API REST con Karate/Gherkin (BDD) y flujos web con Selenium WebDriver.</li>
-        <li>Validé APIs REST con Postman y administré el ciclo de vida de defectos en Jira.</li>
-        <li>Lideré toma de requerimientos funcionales con usuarios no técnicos y entrené a 6 equipos en estándares de calidad.</li>
         <li>Ejecuté pruebas de carga con JMeter y consultas SQL para validación de consistencia de datos.</li>
+        <li>Lideré toma de requerimientos funcionales con usuarios no técnicos y entrené a 6 equipos en estándares de calidad.</li>
       </ul>
     </div>
   </div>
